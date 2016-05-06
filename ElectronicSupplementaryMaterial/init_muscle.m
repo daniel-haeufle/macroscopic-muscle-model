@@ -3,8 +3,6 @@
 % This function loads muscle parameters and calculates the initial
 % conditions for the internal degree of freedom l_CE.
 %
-% Revision 1.23, 25.02.2014
-%
 % If you use this model for scientific purposes, please cite our article:
 % D.F.B. Haeufle, M. Günther, A. Bayer, S. Schmitt (2014) Hill-type muscle
 % model with serial damping and eccentric force-velocity relation Journal
@@ -52,7 +50,7 @@ MP(1) = muscle_param_mus01;
 % and the initial muscle activity have to be defined:
 
 MP(1).l_MTC_init = 0.092+0.172;  % [m] initial MTC length
-MP(1).q_CE_init  = 0.5;          % [] initial muscle activity 0...1
+MP(1).a_CE_init  = 0.5;          % [] initial muscle activity 0...1
 
 % initial condition for internal degree of freedom (l_CE)
 %=========================================================
@@ -61,7 +59,7 @@ MP(1).q_CE_init  = 0.5;          % [] initial muscle activity 0...1
 % force-equilibrium is F_SEE - F_CE - F_PEE = 0. The root is found with
 % fzero
 
-fhandle         = @(l_CE)init_muscle_force_equilib(l_CE, MP(1).l_MTC_init, MP(1).q_CE_init, MP(1));
+fhandle         = @(l_CE)init_muscle_force_equilib(l_CE, MP(1).l_MTC_init, MP(1).a_CE_init, MP(1));
 MP(1).l_CE_init = fzero(fhandle, [0 MP(1).l_MTC_init]);
 clear fhandle
 

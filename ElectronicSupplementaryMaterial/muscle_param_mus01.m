@@ -4,8 +4,6 @@
 % MUSCLE_PARAM_MUS01 returns a struct containing all parameters required
 % for one muscle tendon complex.
 %
-% Revision 1.23, 25.02.2014
-%
 % References: 
 %
 % Guenther, M, S Schmitt, and V Wank. 2007. 'High-Frequency Oscillations as

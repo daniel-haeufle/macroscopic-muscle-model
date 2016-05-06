@@ -6,9 +6,6 @@
 % Any changes to the MTC model's force equation have to be applied here
 % too.
 %
-%
-% Revision 1.23, 25.02.2014
-%
 % If you use this model for scientific purposes, please cite our article:
 % D.F.B. Haeufle, M. Günther, A. Bayer, S. Schmitt (2014) Hill-type muscle
 % model with serial damping and eccentric force-velocity relation Journal
